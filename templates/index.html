@@ -1,1 +1,48 @@
-<!DOCTYPE html><html><body><h1>somya sharma</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mobile Recharge App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  
+
+  <div class="container">
+    <h1>💳 Mobile Recharge</h1>
+    <form action="/recharge" method="POST">
+      <input type="text" name="name" placeholder="Enter Your Name" required><br>
+      <input type="text" name="number" placeholder="Mobile Number" required><br>
+      <input type="number" name="amount" placeholder="Enter Amount" required><br>
+      <select name="operator" required>
+        <option value="">--Select Operator--</option>
+        <option>Jio</option>
+        <option>Airtel</option>
+        <option>VI</option>
+        <option>BSNL</option>
+      </select><br>
+      <button type="submit">Recharge Now</button>
+    </form>
+  </div>
+</body>
+</html>
+SUCCESS HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recharge Success</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    
+    <h1>✅ Recharge Successful!</h1> <br>
+    <h2>THANK YOU</h2>
+    <p>{{ message }}</p>
+    <a href="/">Go Back</a>
+  </div>
+</body>
+</html>
+
